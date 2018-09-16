@@ -1,0 +1,27 @@
+<ion-menu persistent="true" [content]="content" type="overlay">
+  <!-- <ion-header no-border>
+      <ion-title> <img src="assets/imgs/side_menu1.jpg" class="logo-size" alt="logo"> </ion-title>
+  </ion-header> -->
+
+  <ion-content>
+      <ion-list>  
+        <div class="sidemenuHeader">
+            <img src="assets/imgs/side_menu1.jpg" class="logo-size" alt="logo">
+        </div>
+      <button menuClose ion-item  *ngFor="let p of pages" (click)="openPage(p)" class=“position_and_color” detail-none>
+        <ion-icon [name]="p.icon" class=“position_and_size”></ion-icon>
+        &nbsp; {{p.title}}
+      </button>                 
+      </ion-list>
+  </ion-content>
+
+  <ion-footer no-border>    
+      <button class="btnsair" ion-item menuClose (click)="logout()" color="sair-btn" detail-none>    
+        &nbsp; LogOut
+      </button>    
+  </ion-footer>  
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <img alt="logo" class="headerLogo"  src="assets/imgs/logo-1.png" > 
+    <ion-icon name="ios-color-filter-outline" class="filterIcon"></ion-icon>
+    
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+    <ion-card *ngFor="let p of pubArray" >
+        <img  src="{{p.pubImage}}" > 
+        <div class="rating">
+          <ion-icon name ="ios-star" class="staricon"></ion-icon>
+          <ion-icon name ="ios-star" class="staricon"></ion-icon>
+          <ion-icon name ="ios-star" class="staricon"></ion-icon>
+          <ion-icon name ="ios-star" class="staricon"></ion-icon>
+          <ion-icon name  ="ios-star-outline" class="staricon"></ion-icon>
+          
+        </div>
+        <ion-card-content>
+          <ion-card-title class="titleCls">
+            {{p.pubName}} 
+            </ion-card-title>
+          <p class="subtitle">
+            {{p.pubType}} 
+          </p>
+          <button ion-button class="explorebtn" (click)="expolre()">EXPLORE</button>
+          <button ion-button class="explorebtn" (click)="deals()">Deals</button>
+          
+        </ion-card-content>
+      </ion-card>
+</ion-content>
