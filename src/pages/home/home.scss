@@ -1,5 +1,4 @@
 page-home {
-
 }
 .toolbar-background{
     background:#000000;
@@ -47,7 +46,10 @@ ion-app.md [padding] .scroll-content{
     padding: 0 1em;
     width: 86px;
 }
-.button-md.activated{
+.platform-ios .button-ios.activated{
+    background-color: #865000;
+}
+.platform-android .button-md.activated{
     background-color: #865000;
 }
 .rating{

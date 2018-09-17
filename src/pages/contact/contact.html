@@ -1,0 +1,55 @@
+<!--
+  Generated template for the ContactPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <img alt="logo" class="headerLogo"  src="assets/imgs/logo-1.png" > 
+      <ion-icon name="ios-color-filter-outline" class="filterIcon"></ion-icon>
+    </ion-navbar>
+  </ion-header>
+<ion-content padding>
+    <h4 class="heading">Contact Us</h4>
+    <div class="hr-theme-slash-2">
+        <div class="hr-line"></div>
+        <div class="hr-icon"> <ion-icon name="ios-star"></ion-icon>
+        </div>
+        <div class="hr-line"></div>
+      </div>
+    <ion-label color="fulldark" stacked>Name :</ion-label>    
+    <ion-item class="contact-input">
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-label color="fulldark" stacked>Phone :</ion-label>    
+      <ion-item class="contact-input">
+          <ion-input type="tel"></ion-input>
+      </ion-item>
+      <ion-label color="fulldark" stacked>Email :</ion-label>    
+      <ion-item class="contact-input">
+            <ion-input type="email" ></ion-input>
+       </ion-item>
+      <ion-label color="fulldark" stacked>Message :</ion-label>    
+      <ion-textarea  class="contact-input" style="height: 75px;">
+      </ion-textarea>
+      <div class="button button-icon button-full login-bg contact" (click)="goHome();">
+        Send</div>
+      <div class="deviderCls" style="margin:25px 0px 25px 0%; width:100%;"></div>
+      <div>
+          <h4>Contact Information</h4>
+          <h5>Disconox</h5>
+          Flat Number A4B<br>
+          Cosmopolitan Appartments<br>
+          Somajiguda<br>
+          Hyderabad 500082
+        </div>
+        <div style="margin-top: -8px;" (click)="doCall()" ><ion-icon name="ios-call" class="contact-icon" ></ion-icon>
+          <p>+91 9154409046</p></div>
+        <div style="margin-top: -8px;" (click)="doEmail()"><ion-icon name="ios-mail" class="contact-icon" ></ion-icon>
+          <p>connect@disconox.com</p></div>
+                 
+</ion-content>

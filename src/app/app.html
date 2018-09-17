@@ -8,10 +8,11 @@
         <div class="sidemenuHeader">
             <img src="assets/imgs/side_menu1.jpg" class="logo-size" alt="logo">
         </div>
-      <button menuClose ion-item  *ngFor="let p of pages" (click)="openPage(p)" class=“position_and_color” detail-none>
-        <ion-icon [name]="p.icon" class=“position_and_size”></ion-icon>
+      <button menuClose ion-item class="menuItem" *ngFor="let p of pages" (click)="openPage(p)" detail-none>
+        <ion-icon [name]="p.icon"></ion-icon>
         &nbsp; {{p.title}}
-      </button>                 
+      </button>
+                       
       </ion-list>
   </ion-content>
 

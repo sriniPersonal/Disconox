@@ -1,16 +1,22 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar hideBackButton="true">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <img alt="logo" class="headerLogo"  src="assets/imgs/logo-1.png" > 
-    <ion-icon name="ios-color-filter-outline" class="filterIcon"></ion-icon>
-    
-    
+    <ion-icon name="ios-color-filter-outline" class="filterIcon"></ion-icon>   
   </ion-navbar>
 </ion-header>
 
 <ion-content >
+    <h4 class="heading">All</h4>
+    <div class="hr-theme-slash-2">
+        <div class="hr-line"></div>
+        <div class="hr-icon"> <ion-icon name="ios-star"></ion-icon>
+        </div>
+        <div class="hr-line"></div>
+      </div>
+    
     <ion-card *ngFor="let p of pubArray" >
         <img  src="{{p.pubImage}}" > 
         <div class="rating">

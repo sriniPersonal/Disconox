@@ -5,7 +5,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-
+import {FaqPage} from '../pages/faq/faq';
+import {AboutPage} from '../pages/about/about';
+import {LoginPage} from '../pages/login/login';
+import {BeacomePartnerPage} from '../pages/beacome-partner/beacome-partner';
+import { TermsOfUsePage} from '../pages/terms-of-use/terms-of-use';
+import { ContactPage} from '../pages/contact/contact';
 @Component({
   templateUrl: 'app.html'
 })
@@ -22,14 +27,14 @@ export class MyApp {
     // used for an example of ngFor and navigation
    this.pages = [
  
-  { title: 'Login', component: HomePage, Icon :'ios-home-outline' },
-  { title: 'Search Details', component: ListPage , Icon :'ios-home-outline' },
+  { title: 'Login', component: LoginPage, Icon :'ios-home-outline' },
+  { title: 'Search Details', component: HomePage , Icon :'ios-home-outline' },
   { title: 'Book A Cab', component: HomePage , Icon : 'ios-home-outline'},
   { title: 'Notifications', component: HomePage , Icon : 'ios-home-outline' },
-  { title: "FAQ's", component: HomePage , Icon : 'ios-home-outline'},
-  { title: 'About Us', component: HomePage , Icon :'ios-home-outline' },
-  { title: 'Become A Partner', component: HomePage , Icon :'ios-home-outline' },
-  { title: 'Contact Us', component: HomePage , Icon :'ios-home-outline' }
+  { title: "FAQ's", component: FaqPage , Icon : 'ios-home-outline'},
+  { title: 'About Us', component: AboutPage , Icon :'ios-home-outline' },
+  { title: 'Become A Partner', component: BeacomePartnerPage , Icon :'ios-home-outline' },
+  { title: 'Contact Us', component: ContactPage , Icon :'ios-home-outline' }
 
 ];
 

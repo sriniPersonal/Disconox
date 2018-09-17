@@ -1,0 +1,23 @@
+page-contact {
+.contact-input{
+    padding-left: 0px;
+    font-size: 12px;
+    background: #fdfbfb;
+    margin: 7px 0px 0px -1px;
+    border: 1px solid #e6e6e6;
+}
+.contact{
+    margin: 30px 0px;
+    height: 45px;
+    width: 100%;
+    text-align: center !important;
+    padding-left: 0px !important;
+}
+.contact-icon{
+    margin: 1px 5px 0px 0px;
+    float: left;
+}
+}
+.item-md.item-input.item-input-has-focus .item-inner, .item-md.item-input.input-has-focus .item-inner{
+    border-bottom-color : #c8a262;
+}
