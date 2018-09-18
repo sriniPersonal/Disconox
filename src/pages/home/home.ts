@@ -9,6 +9,8 @@ import { Platform } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  iffalse: boolean = true;
+  iftrue: boolean = false;
 
   pubArray : any;
   listCardsAdventure: any;
@@ -100,7 +102,19 @@ export class HomePage {
       ]
     });
     actionSheet.present();
- 
 }
-
+ionViewDidLoad() {
+  console.log('ionViewDidLoad GalleryPage');
+  this.iffalse = true;
+  this.iftrue = false;
+}
+addfav(){
+  this.iffalse = false;
+  this.iftrue = true;
+}
+removefav(){
+  console.log("pause");
+  this.iffalse = true;
+  this.iftrue = false;
+}
 }

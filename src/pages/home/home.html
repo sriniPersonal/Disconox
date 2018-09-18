@@ -34,6 +34,10 @@
           <p class="subtitle">
             {{p.pubType}} 
           </p>
+          <!-- <ion-icon name ="ios-heart-outline" class="favIcon"></ion-icon> -->
+          <img alt="logo" class="faviconCls"  [hidden]="iffalse" (click)="addfav()" src="assets/imgs/like.png" > 
+          <img alt="logo" class="faviconCls"  [hidden]="iftrue" (click)="removefav()" src="assets/imgs/heart.png" > 
+
           <button ion-button class="explorebtn" (click)="expolre()">EXPLORE</button>
           <button ion-button class="explorebtn" (click)="deals()">Deals</button>
           

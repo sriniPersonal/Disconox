@@ -1,0 +1,129 @@
+General User Registration (Role : 3 )
+
+API URL ::    http://disconox.com.fozzyhost.com/v1/InnoChat//registration
+Method :  POST
+
+Request Objects :
+{
+"clientId":"x6DmrbsQFZyUUiggs0BZ",
+"name":"ganesh",
+"password":"test1234",
+"phone":"8912345678",
+"email":"ganesh12@gmail.com",
+"address":"",
+"image":"",
+"role":3,
+"venue_name": "",
+"street_name": "",
+"city": "",
+"state": "",
+  "location":""
+}
+
+Response :  
+
+{
+    "error": false,
+    "message": "Email Already Exist"
+}
+
+
+Request Object:
+{
+"clientId":"x6DmrbsQFZyUUiggs0BZ",
+"name1":"ganesh",
+"password":"test1234",
+"phone":"8912345678",
+"email":"ganesh12@gmail.com",
+"address":"",
+"image":"",
+"role":3,
+"venue_name": "",
+"street_name": "",
+"city": "",
+"state": "",
+  "location":""
+}
+
+Respone :
+
+{
+    "error": true,
+    "message": "Oops! Bad request."
+}
+
+Request Object :
+{
+"clientId":"x6DmrbsQFZyUUiggs0BZ",
+"name":"ganesh",
+"password":"test1234",
+"phone":"8912345678",
+"email":"ganesh1211@gmail.com",
+"address":"",
+"image":"",
+"role":3,
+"venue_name": "",
+"street_name": "",
+"city": "",
+"state": "",
+  "location":""
+}
+
+Response :
+
+{
+    "message": "Registration Success.",
+    "error": false,
+    "id": 115,
+    "profile_id": 53,
+    "email": "ganesh1211@gmail.com",
+    "phone": "8912345678",
+    "role": 3,
+    "name": "ganesh"
+}
+
+Login API :
+
+API URL :     http://disconox.com.fozzyhost.com/v1/InnoChat//login
+Method : POST
+
+Request Objects :
+
+{
+"clientId":"x6DmrbsQFZyUUiggs0BZ",
+  "email":"hemaone@gmail.com",
+  "password":"test123"
+}
+
+
+Response :
+
+{
+    "message": "Login Successfully.",
+    "error": false,
+    "UserDetails": {
+        "id": 114,
+        "name": "hemaone",
+        "email": "hemaone@gmail.com",
+        "phone": "7386048815",
+        "address": "",
+        "password": "cc03e747a6afbbcbf8be7668acfebee5",
+        "role": 3,
+        "image": "",
+        "status": "1",
+        "created": "2018-09-16 10:15:31"
+    }
+}
+
+Request Objects :
+{
+"clientId":"x6DmrbsQFZyUUiggs0BZ",
+  "email":"12hemaone@gmail.com",
+  "password":"test123"
+}
+
+Response :
+{
+    "message": "User Login Failed.Either User Name or Password is Wrong.",
+    "error": true
+}
