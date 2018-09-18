@@ -22,10 +22,18 @@
           <div class="hr-line"></div>
         </div>
        <div class="loginCard">
+          <ion-item class="loginText">
+              <ion-label name= "name" color="dark" floating>Full Name</ion-label>
+             <ion-input></ion-input>
+           </ion-item>
         <ion-item class="loginText">
           <ion-label name= "email" color="dark" floating>Email</ion-label>
           <ion-input></ion-input>
         </ion-item>
+        <ion-item class="loginText">
+            <ion-label name= "number" color="dark" floating>Mobile</ion-label>
+           <ion-input></ion-input>
+         </ion-item>
         <ion-item class="loginText">
            <ion-label name= "password" color="dark" floating>Password</ion-label>
           <ion-input></ion-input>
@@ -35,8 +43,8 @@
            <ion-input></ion-input>
          </ion-item>
       </div>
-      <div class="button button-icon button-full login-bg"><ion-icon name="md-log-in" class="iconCls"></ion-icon>
-        Login</div>
+      <div class="button button-icon button-full login-bg" (click)="doRegister()"><ion-icon name="md-log-in" class="iconCls"></ion-icon>
+        Register</div>
   
         <div class="deviderCls"></div>
             

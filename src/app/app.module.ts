@@ -21,6 +21,7 @@ import { ParallaxHeaderDirective } from '../directives/parallax-header/parallax-
 import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator';
 import { CallNumber } from '@ionic-native/call-number';
 import { EmailComposer } from '@ionic-native/email-composer';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { EmailComposer } from '@ionic-native/email-composer';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
