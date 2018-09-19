@@ -4,7 +4,7 @@
   </ion-header> -->
 
   <ion-content>
-      <ion-list>  
+      <ion-list class="menulist">  
         <div class="sidemenuHeader">
             <img src="assets/imgs/side_menu1.jpg" class="logo-size" alt="logo">
         </div>
@@ -17,11 +17,11 @@
   </ion-content>
 
   <ion-footer no-border>    
-      <button class="btnsair" ion-item menuClose (click)="logout()" color="sair-btn" detail-none>    
+      <button class="footerMenu" ion-item menuClose (click)="logout()" color="sair-btn" detail-none>    
         &nbsp; LogOut
       </button>    
   </ion-footer>  
-
+ 
 </ion-menu>
 
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->

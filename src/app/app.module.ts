@@ -22,6 +22,10 @@ import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-na
 import { CallNumber } from '@ionic-native/call-number';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { HttpModule } from '@angular/http';
+import { ApiProvider } from '../providers/api/api';
+import { HttpClientModule } from '@angular/common/http';
+import { SharedPreferences } from '../helper/preferences';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 
 @NgModule({
@@ -34,6 +38,7 @@ import { HttpModule } from '@angular/http';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -44,7 +49,10 @@ import { HttpModule } from '@angular/http';
   providers: [
     StatusBar,
     SplashScreen,LaunchNavigator,CallNumber,EmailComposer,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ApiProvider,
+    SharedPreferences,
+    NativeStorage
   ]
 })
 export class AppModule {}

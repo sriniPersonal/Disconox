@@ -9,35 +9,51 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ApiProvider {
   // baseUrl: string = 'https://swapi.co/api/films';
-  baseUrl: string = "https://api.coalmountains.in/api/"
-
+  baseUrl: string = "http://disconox.com.fozzyhost.com/v1/InnoChat//";
   constructor(public http: HttpClient) {
     console.log('Hello ApiProvider Provider');
   }
   //common headers for api calls.
   preareHeader() {
-    /*   let options={
-        "AuthenticationToken":"ff9cdf16-aa5e-4623-b1f7-ed66fbb75172",
-        "AppSource":"android_2.1.7",
-        "UserId":"2",
-        "MobileLanguage":"1"
-      } */
     let options = {
-      'Content-Type': 'application/x-www-form-urlencoded'
-    // 'Content-Type': 'application/json'
+      'Content-Type': 'application/json'
     }
     return options;
   }
 
-    //send otp:
+  login(requestbody):any {
+    let otpUrl = this.baseUrl + "login";
+    return new Promise((resolve, reject) => {
+      this.http.post(otpUrl, requestbody, {
+        headers: this.preareHeader()
+      })
+        .subscribe(res => {
+          resolve(res);
+        }, err => {
+          reject(err);
+        });
+    })
+  }
+  register(requestbody):any {
+    let otpUrl = this.baseUrl + "registration";
+    return new Promise((resolve, reject) => {
+      this.http.post(otpUrl, requestbody, {
+        headers: this.preareHeader()
+      })
+        .subscribe(res => {
+          resolve(res);
+        }, err => {
+          reject(err);
+        });
+    })
+  }
 
-  sendOtp(mobileNUmber) {
-    let requestbody = {"mobile": mobileNUmber};
+  //send otp:
 
-  //  requestbody=
-  // let requestbody="&mobile=" + '7760032653';
-    
-
+/*   sendOtp(mobileNUmber) {
+    let requestbody = { "mobile": mobileNUmber };
+    //  requestbody=
+    // let requestbody="&mobile=" + '7760032653';
     let otpUrl = this.baseUrl + "SendOTP";
     return new Promise((resolve, reject) => {
       this.http.post(otpUrl, requestbody, {
@@ -50,7 +66,7 @@ export class ApiProvider {
         });
     })
   }
-  /* //get request example
+ */  /* //get request example
   getFilms() {
     return new Promise((resolve, reject) => {
       this.http.get(this.baseUrl)
@@ -74,34 +90,6 @@ export class ApiProvider {
        });
      })
    } */
-
-   getRestaurents(data){
-      let url = this.baseUrl + "GetRestaurants";
-      return new Promise((resolve, reject) => {
-        this.http.post(url, data, {
-          headers: this.preareHeader()
-        })
-          .subscribe(res => {
-            resolve(res);
-          }, err => {
-            reject(err);
-          });
-      })
-   }
-
-   getRestaurentDetails(data){
-    let url = this.baseUrl + "GetRestaurantCategoryItems ";
-    return new Promise((resolve, reject) => {
-      this.http.post(url, data, {
-        headers: this.preareHeader()
-      })
-        .subscribe(res => {
-          resolve(res);
-        }, err => {
-          reject(err);
-        });
-    })
- }
 
 }
 

@@ -15,7 +15,7 @@ export class SharedPreferences {
                 error => console.error('Error storing item', error)
             );
     }
-    getData(key) {
+    getData(key):any {
         return new Promise((resolve) => {
             this.nativeStorage.getItem(key)
                 .then(
